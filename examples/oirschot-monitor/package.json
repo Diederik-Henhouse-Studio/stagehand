@@ -1,0 +1,37 @@
+{
+  "name": "oirschot-monitor-mvp",
+  "version": "1.0.0",
+  "description": "MVP for monitoring Oirschot municipal government portal",
+  "main": "mvp-analyzer.ts",
+  "scripts": {
+    "analyze": "tsx mvp-analyzer.ts",
+    "analyze:cloud": "tsx mvp-analyzer-cloud.ts",
+    "analyze:traditional": "tsx mvp-analyzer-traditional.ts",
+    "compare": "tsx compare-methods.ts",
+    "crawl:deep": "tsx deep-meeting-crawler.ts",
+    "validate": "tsx validation-scraper.ts",
+    "scrape:profile": "tsx profile-based-scraper.ts",
+    "explore:calendar": "tsx calendar-explorer.ts",
+    "sessions:report": "tsx -e \"import {SessionTracker} from './session-tracker.js'; console.log(new SessionTracker('./data').generateReport())\"",
+    "build": "tsc mvp-analyzer.ts --outDir dist --module commonjs --target es2020 --esModuleInterop --resolveJsonModule --skipLibCheck",
+    "start": "node dist/mvp-analyzer.js"
+  },
+  "keywords": [
+    "stagehand",
+    "scraping",
+    "monitoring",
+    "government"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@browserbasehq/stagehand": "file:../../packages/core",
+    "dotenv": "^16.4.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0"
+  }
+}

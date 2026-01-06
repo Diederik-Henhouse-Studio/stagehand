@@ -1,0 +1,54 @@
+{
+  "name": "politeia",
+  "version": "1.0.0-alpha",
+  "description": "Configuration-driven Scraping-as-a-Service for governmental information",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-esm src/index.ts",
+    "test": "vitest",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "test:monthly": "tsx scripts/monthly-validator.ts",
+    "test:oirschot": "tsx scripts/monthly-validator.ts --municipality=oirschot",
+    "test:tilburg": "tsx scripts/monthly-validator.ts --municipality=tilburg",
+    "demo": "tsx scripts/demo.ts",
+    "cli": "tsx scripts/politeia-cli.ts",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "scraping",
+    "government",
+    "municipality",
+    "notubiz",
+    "ibis",
+    "browserbase",
+    "playwright"
+  ],
+  "author": "Politeia Team",
+  "license": "MIT",
+  "dependencies": {
+    "@browserbase/stagehand": "file:../../packages/core",
+    "playwright": "^1.40.0",
+    "date-fns": "^3.0.0",
+    "commander": "^11.1.0",
+    "winston": "^3.11.0",
+    "zod": "^3.22.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.7.0",
+    "vitest": "^1.0.0",
+    "eslint": "^8.56.0",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
