@@ -78,6 +78,26 @@ A scalable, configuration-driven Scraping-as-a-Service platform for extracting g
 
 ---
 
+## 🗺️ Implementation Planning
+
+### Ready to Build?
+
+We've created comprehensive implementation documentation to guide you from planning to production:
+
+- **[📋 Implementation Roadmap](./IMPLEMENTATION-ROADMAP.md)** - Detailed 4-6 week plan with code examples, architecture, and technical specifications
+- **[⚡ Executive Summary](./IMPLEMENTATION-SUMMARY.md)** - Quick overview of timeline, phases, and deliverables
+
+**Implementation Approach:**
+1. **Phase 1:** NOTUBIZ/Oirschot scraper with full testing (2-3 weeks)
+2. **Phase 2:** IBIS/Tilburg multi-platform support (1-2 weeks)
+3. **Phase 3:** Demo environment and presentation materials (1 week)
+
+**Target:** Demo-ready standalone system for monthly self-testing and stakeholder presentation
+
+→ **Start Here:** [View Implementation Summary](./IMPLEMENTATION-SUMMARY.md)
+
+---
+
 ## 📊 System Overview
 
 ```mermaid
